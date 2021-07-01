@@ -6,9 +6,8 @@ const fetch = require('node-fetch');
 const PORT = 5000;
 
 const app = express();
+app.use(express.json());
 app.use(cors());
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
 
 const corsOptions = {
     origin: "http://localhost:3000"
